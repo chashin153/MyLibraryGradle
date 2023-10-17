@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Main-Class: com.systex.machineLibrary.randomCaptcha.ranCaptcha
+Class-Path: junit-platform-engine-1.9.3.jar spring-boot-starter-actuator
+ -3.1.4.jar mockito-junit-jupiter-5.3.1.jar opentest4j-1.2.0.jar spring-
+ web-6.0.12.jar jackson-databind-2.15.2.jar byte-buddy-1.14.8.jar microm
+ eter-core-1.11.4.jar spring-boot-actuator-3.1.4.jar junit-jupiter-param
+ s-5.9.3.jar hamcrest-2.2.jar json-path-2.8.0.jar junit-jupiter-engine-5
+ .9.3.jar tomcat-embed-core-10.1.13.jar asm-9.3.jar thymeleaf-3.1.2.RELE
+ ASE.jar spring-boot-starter-logging-3.1.4.jar jackson-core-2.15.2.jar s
+ pring-boot-starter-test-3.1.4.jar spring-core-6.0.12.jar unbescape-1.1.
+ 6.RELEASE.jar spring-test-6.0.12.jar jakarta.activation-api-2.1.2.jar j
+ ackson-datatype-jdk8-2.15.2.jar jakarta.annotation-api-2.1.1.jar jackso
+ n-module-parameter-names-2.15.2.jar junit-jupiter-5.9.3.jar micrometer-
+ commons-1.11.4.jar jul-to-slf4j-2.0.9.jar spring-boot-starter-tomcat-3.
+ 1.4.jar spring-boot-starter-thymeleaf-3.1.4.jar xmlunit-core-2.9.1.jar 
+ spring-boot-devtools-3.1.4.jar spring-jcl-6.0.12.jar attoparser-2.0.7.R
+ ELEASE.jar micrometer-observation-1.11.4.jar spring-boot-starter-json-3
+ .1.4.jar spring-aop-6.0.12.jar spring-expression-6.0.12.jar json-smart-
+ 2.4.11.jar spring-boot-autoconfigure-3.1.4.jar android-json-0.0.2013110
+ 8.vaadin1.jar spring-context-6.0.12.jar spring-boot-actuator-autoconfig
+ ure-3.1.4.jar snakeyaml-1.33.jar logback-classic-1.4.11.jar HdrHistogra
+ m-2.1.12.jar spring-boot-test-autoconfigure-3.1.4.jar jsonassert-1.5.1.
+ jar byte-buddy-agent-1.14.8.jar LatencyUtils-2.0.3.jar spring-boot-3.1.
+ 4.jar assertj-core-3.24.2.jar thymeleaf-spring6-3.1.2.RELEASE.jar jacks
+ on-annotations-2.15.2.jar jakarta.xml.bind-api-4.0.1.jar mockito-core-5
+ .3.1.jar spring-boot-test-3.1.4.jar accessors-smart-2.4.11.jar logback-
+ core-1.4.11.jar spring-boot-starter-3.1.4.jar jackson-datatype-jsr310-2
+ .15.2.jar log4j-api-2.20.0.jar spring-webmvc-6.0.12.jar tomcat-embed-el
+ -10.1.13.jar tomcat-embed-websocket-10.1.13.jar objenesis-3.3.jar log4j
+ -to-slf4j-2.20.0.jar slf4j-api-2.0.9.jar spring-beans-6.0.12.jar junit-
+ platform-commons-1.9.3.jar spring-boot-starter-web-3.1.4.jar junit-jupi
+ ter-api-5.9.3.jar
+

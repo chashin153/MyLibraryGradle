@@ -1,0 +1,91 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.4'
+	id 'io.spring.dependency-management' version '1.1.3'
+	id 'maven-publish' // 添加maven-publish插件
+}
+
+group = 'com.systex.machineLibrary'
+version = '0.0.3'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+// 添加maven-publish的发布配置
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			artifact bootJar
+
+			if (version.endsWith('-SNAPSHOT')) {
+				// 发布到快照仓库
+				repositories {
+					maven {
+						name = 'nexus-snapshots'
+						url 'http://localhost:8081/repository/maven-snapshots/'
+						credentials {
+							username = 'admin'
+							password = 'Chashin153'
+						}
+						allowInsecureProtocol = true
+					}
+				}
+			} else {
+				// 发布到正式仓库
+				repositories {
+					maven {
+						name = 'nexus-releases'
+						url 'http://localhost:8081/repository/maven-releases/'
+						credentials {
+							username = 'admin'
+							password = 'Chashin153'
+						}
+						allowInsecureProtocol = true
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation files('D:/randomCaptcha/out/artifacts/randomCaptcha_jar/randomCaptcha.jar')
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+tasks.withType(Jar) {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+	manifest {
+		attributes 'Main-Class': 'MainKt'
+	}
+
+	from sourceSets.main.output
+	exclude('BOOT-INF/classes/') // 排除Spring Boot的内部类文件
+	exclude('META-INF/spring.factories') // 如果需要排除Spring Boot的自动配置
+
+}
+
